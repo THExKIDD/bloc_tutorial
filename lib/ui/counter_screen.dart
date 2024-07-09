@@ -16,7 +16,7 @@ class _CounterScreenState extends State<CounterScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Counter'),
+        title: const Text('Counter'),
         centerTitle: true,
       ),
       body: Column(
@@ -28,7 +28,7 @@ class _CounterScreenState extends State<CounterScreen> {
               return Center(
                 child: Text(
                   state.counter.toString(),
-                  style: TextStyle(
+                  style: const TextStyle(
                     fontSize: 60,
                   ),
                 ),
@@ -41,13 +41,13 @@ class _CounterScreenState extends State<CounterScreen> {
             children: [
               ElevatedButton(
                 onPressed: () {},
-                child: Text('Increment'),
+                child: const Text('Increment'),
               ),
               ElevatedButton(
                 onPressed: () {
                   context.read<CounterBloc>().add(IncrementCounter());
                 },
-                child: Text('Decrement'),
+                child: const Text('Decrement'),
               )
             ],
           ),
