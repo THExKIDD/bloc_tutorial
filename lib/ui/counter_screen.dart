@@ -40,12 +40,14 @@ class _CounterScreenState extends State<CounterScreen> {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  context.read<CounterBloc>().add(IncrementCounter());
+                },
                 child: const Text('Increment'),
               ),
               ElevatedButton(
                 onPressed: () {
-                  context.read<CounterBloc>().add(IncrementCounter());
+                  context.read<CounterBloc>().add(DecrementCounter());
                 },
                 child: const Text('Decrement'),
               )
